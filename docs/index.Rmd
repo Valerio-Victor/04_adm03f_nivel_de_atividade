@@ -931,7 +931,7 @@ pmc_sa <- plotly::ggplotly(pmc_sa) %>%
   plotly::layout(legend = list(orientation = 'h', y = -0.3))
 
 
-widgetframe::frameWidget(pmc_sa, width = '100%', height = '100%')
+widgetframe::frameWidget(pmc_sa, width = '110%', height = '110%')
 
 
 
