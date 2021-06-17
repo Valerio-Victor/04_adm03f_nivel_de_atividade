@@ -291,14 +291,16 @@ componentes_demanda <- agregados_macroeconomicos %>%
 
                 x = 'Trimestres',
 
-                y = 'Número Índice (Base: media de 1995 = 100)') +
+                y = 'Índice (média de 1995 = 100)') +
   
   xaringanthemer::theme_xaringan(text_font_size = 15,
                                  
                                  title_font_size = 20) 
   
 
-componentes_demanda <- plotly::ggplotly(componentes_demanda)
+componentes_demanda <- plotly::ggplotly(componentes_demanda) %>% 
+  
+  plotly::layout(legend = list(orientation = 'h', y = -0.3))
 
 
 widgetframe::frameWidget(componentes_demanda, width = '100%', height = '100%')
@@ -342,7 +344,7 @@ componentes_demanda <- agregados_macroeconomicos %>%
 
                 x = 'Trimestres',
 
-                y = 'Número Índice (Base: media de 1995 = 100)') +
+                y = 'Índice (média de 1995 = 100)') +
   
   xaringanthemer::theme_xaringan(text_font_size = 15,
                                  
@@ -369,7 +371,9 @@ componentes_demanda <- agregados_macroeconomicos %>%
                     fill = '#BA5450', alpha = 0.2) 
   
 
-componentes_demanda <- plotly::ggplotly(componentes_demanda)
+componentes_demanda <- plotly::ggplotly(componentes_demanda) %>% 
+  
+  plotly::layout(legend = list(orientation = 'h', y = -0.3))
 
 
 widgetframe::frameWidget(componentes_demanda, width = '100%', height = '100%')
@@ -502,7 +506,7 @@ ibc_br_sa <- BETS::BETSget(24364, data.frame = T) %>%
                 
                 x = 'Meses',
                 
-                y = 'Índice (Base: 2002 = 100 com ajuste sazonal)',
+                y = 'Índice (2002 = 100 com ajuste sazonal)',
                 
                 caption = 'Dados: IBGE.') +
   
@@ -593,7 +597,7 @@ pim_sa <- sidrar::get_sidra(api = '/t/3651/n1/all/v/3134/p/all/c543/129278,12928
 
                 x = 'Meses',
                 
-                y = 'Índice (Base: 2012 = 100 com ajuste sazonal)') +
+                y = 'Índice (2012 = 100 com ajuste sazonal)') +
   
   ggplot2::scale_x_continuous(limits = c(2002, 2021)) +
   
@@ -602,7 +606,9 @@ pim_sa <- sidrar::get_sidra(api = '/t/3651/n1/all/v/3134/p/all/c543/129278,12928
                                  title_font_size = 20) 
   
 
-pim_sa <- plotly::ggplotly(pim_sa)
+pim_sa <- plotly::ggplotly(pim_sa) %>% 
+  
+  plotly::layout(legend = list(orientation = 'h', y = -0.3))
 
 
 widgetframe::frameWidget(pim_sa, width = '100%', height = '100%')
@@ -762,14 +768,16 @@ pms_sa <- sidrar::get_sidra(api = '/t/6442/n1/all/v/all/p/all/c11046/40312/d/v86
 
                 x = 'Meses',
                 
-                y = 'Índice (Base: 2014 = 100 com ajuste sazonal)') +
+                y = 'Índice (2014 = 100 com ajuste sazonal)') +
   
   xaringanthemer::theme_xaringan(text_font_size = 15,
                                  
                                  title_font_size = 20) 
   
 
-pms_sa <- plotly::ggplotly(pms_sa)
+pms_sa <- plotly::ggplotly(pms_sa) %>% 
+  
+  plotly::layout(legend = list(orientation = 'h', y = -0.3))
 
 
 widgetframe::frameWidget(pms_sa, width = '100%', height = '100%')
@@ -846,7 +854,7 @@ pmc_sa <- sidrar::get_sidra(api = '/t/3416/n1/all/v/all/p/all/c11046/40312/d/v56
 
                 x = 'Meses',
                 
-                y = 'Índice (Base: 2014 = 100 com ajuste sazonal)') +
+                y = 'Índice (2014 = 100 com ajuste sazonal)') +
   
   ggplot2::scale_x_continuous(limits = c(2000, 2021)) +
   
@@ -855,7 +863,9 @@ pmc_sa <- sidrar::get_sidra(api = '/t/3416/n1/all/v/all/p/all/c11046/40312/d/v56
                                  title_font_size = 20) 
   
 
-pmc_sa <- plotly::ggplotly(pmc_sa)
+pmc_sa <- plotly::ggplotly(pmc_sa) %>% 
+  
+  plotly::layout(legend = list(orientation = 'h', y = -0.3))
 
 
 widgetframe::frameWidget(pmc_sa, width = '100%', height = '100%')
@@ -907,7 +917,7 @@ pmc_sa <- sidrar::get_sidra(api = '/t/3417/n1/all/v/all/p/all/c11046/40312/d/v11
 
                 x = 'Meses',
                 
-                y = 'Índice (Base: 2014 = 100 com ajuste sazonal)') +
+                y = 'Índice (2014 = 100 com ajuste sazonal)') +
   
   ggplot2::scale_x_continuous(limits = c(2003, 2021)) +
   
@@ -916,7 +926,9 @@ pmc_sa <- sidrar::get_sidra(api = '/t/3417/n1/all/v/all/p/all/c11046/40312/d/v11
                                  title_font_size = 20) 
   
 
-pmc_sa <- plotly::ggplotly(pmc_sa)
+pmc_sa <- plotly::ggplotly(pmc_sa) %>% 
+  
+  plotly::layout(legend = list(orientation = 'h', y = -0.3))
 
 
 widgetframe::frameWidget(pmc_sa, width = '100%', height = '100%')
