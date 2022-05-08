@@ -1,11 +1,11 @@
 ---
-title: 'NÍVEL DE ATIVIDADE </br> (AULA 05)'
+title: 'NÍVEL DE ATIVIDADE </br> (AULA 06)'
 subtitle: 'ADM03F - Macroeconomia'
 author: 'Autor: Victor Valerio'
 date: 'Última atualização: `r format(Sys.Date(),"%d-%m-%Y")`'
 output:
   xaringan::moon_reader:
-    css: [xaringan-themer.css]
+    css: ['default', 'meutema.css']
     nature:
       highlightStyle: github
       highlightLines: true
@@ -45,13 +45,7 @@ xaringanExtra::use_search(show_icon = TRUE)
 - [**REVISÃO**](#revisao)
 
 
-</br>
-
-
 - [**ANÁLISE DOS COMPONENTES DA DEMANDA**](#)
-
-
-</br>
 
 
 - [**ANÁLISE DE INDICADORES DE CONJUNTURA**](#)
@@ -72,19 +66,10 @@ name: revisao
 ## FLUXO CIRCULAR DA RENDA (AMPLIADO)
 
 
-**CONCEITO**
-
-
-</br>
-
-
-- Na última aula começamos a discutir o funcionamento da economia de um país a partir de um modelo 
+- Nas aulas anteriores já foi discutido o funcionamento da economia de um país a partir de um modelo 
 introdutório, chamado **Fluxo Circular da Renda**, cujo **objetivo consiste em identificar quais as 
 principais transações econômicas (que foram originadas no processo de produção) realizadas entre os 
 setores institucionais**;
-
-
-</br>
 
 
 - Antes de introduzir mais conceitos associados ao funcionamento da economia vamos relembrar as 
@@ -96,12 +81,6 @@ hipóteses associadas ao modelo e o equacionamento derivado.
 
 
 ## FLUXO CIRCULAR DA RENDA (AMPLIADO)
-
-
-**CONCEITO**
-
-
-</br>
 
 
 - Em sua versão ampliada, tem-se os seguintes pressupostos adicionados:
@@ -126,11 +105,7 @@ class: inverse
 
 ```{r, echo = F, warning = F, message = F, error = F, out.width= '100%', fig.align = 'center'}
 
-
-
 knitr::include_graphics('fcr_ampliado.png', dpi = 300)
-
-
 
 ```
   
@@ -142,30 +117,20 @@ knitr::include_graphics('fcr_ampliado.png', dpi = 300)
 ## FLUXO CIRCULAR DA RENDA (AMPLIADO)
 
 
-**COMPLETANDO O MODELO**
-
-
-- Ao adicionar os demais setores institucionais no contexto do fluxo circular da renda em sua versão
-ampliada, tem-se:
-
-  
+- Ao adicionar os demais setores institucionais tem-se:
   
 $$Y = C + I + G + X - M$$
+$Y$: Produto Interno Bruto;
+  
+$C$: Consumo das Famílias;
+  
+$I$: Investimento das Empresas;
+  
+$G$: Gastos do Governo;
 
-- Variáveis:
-
-  - $Y$: Produto Interno Bruto;
+$X$: Exportações;
   
-  - $C$: Consumo das Famílias;
-  
-  - $I$: Investimento das Empresas;
-  
-  - $G$: Gastos do Governo;
-
-  - $X$: Exportações;
-  
-  - $M$: Importações.
-  
+$M$: Importações.
   
 ---
 class: inverse, center, middle 
@@ -182,18 +147,9 @@ name: revisao
 ## ANÁLISE DOS COMPONENTES DA DEMANDA
 
 
-**CONCEITOS:**
-
-
-</br>
-
-
 - A análise do mercado de bens e serviços é chave para compreender o desempenho de uma economia em 
 um determinado período de tempo. A partir dele, podemos compreender qual a "conjuntura" enfrentada
-pela população em determinado período de tempo;
-
-
-</br>
+pela população;
 
 
 - Podemos avaliar o mercado a partir de duas perspectivas, chamadas de curto prazo e longo prazo. 
@@ -207,16 +163,9 @@ corresponde ao vídeo. (A análise é cafona, mas ajuda pode ajudar a compreende
 
 ## ANÁLISE DOS COMPONENTES DA DEMANDA
 
-
-**CONCEITOS:**
-
-
 - No **curto prazo** podemos compreender que o mercado de bens e serviços ainda não está em equilíbrio, 
 ou seja, a oferta e a demanda por bens e serviços "podem ser ajustadas". Neste caso, um olhar atento 
 para os **componentes da demanda agregada** podem ser apreciados de modo a impactar a conjuntura;
-
-
-</br>
 
 
 - Por sua vez, no **longo prazo**, entende-se que a oferta e a demanda por bens e serviços estão em 
@@ -224,12 +173,20 @@ para os **componentes da demanda agregada** podem ser apreciados de modo a impac
 **investimento agregado**;
 
 
-</br>
+---
+<div style="text-align: justify">
 
+
+## ANÁLISE DOS COMPONENTES DA DEMANDA
 
 - **Esta disciplina tem por foco a análise de curto prazo**, ou seja, a análise de conjuntura econômica 
 de um determinado país (de modo a compreender o impacto na vida das pessoas e também, como percurso
-fundamental para todo administrador, o impacto dos ciclos econômicos nos negócios).
+fundamental para todo administrador, o impacto dos ciclos econômicos nos negócios);
+
+- Neste sentido, iremos avaliar o gráfico com dos componentes da **demanda agregada** de maneira similar 
+ao que foi discutido no âmbito da análise do **Produto Interno Bruto** **(Y)**. Isto é, devemos 
+avaliar a tendência de cada variável com a finalidade de explicar como o PIB está sendo absorvido
+(ou incentivado) pelos componentes da demanda.
 
 
 ---
@@ -241,13 +198,11 @@ fundamental para todo administrador, o impacto dos ciclos econômicos nos negóc
 ```{r, warning = F,message = F, error = F, echo = F, fig.align = 'center', dpi = 300}
 
 
-`%>%` <- magrittr::`%>%`
+library(magrittr, include.only = '%>%')
 
 
-agregados_macroeconomicos <- sidrar::get_sidra(api = '/t/1621/n1/all/v/all/p/all/c11255/90707,93404,93405,93406,93407,93408/d/v584%202',
-
-                                               period = as.Date('2020-04-01')) %>%
-
+agregados_macroeconomicos <- sidrar::get_sidra(api = '/t/1621/n1/all/v/all/p/all/c11255/90707,93404,93405,93406,93407,93408/d/v584%202') %>%
+  
   janitor::clean_names() %>%
 
   dplyr::mutate(date = zoo::as.yearqtr(trimestre_codigo, format = '%Y %q')) %>%
@@ -271,15 +226,19 @@ componentes_demanda <- agregados_macroeconomicos %>%
 
   dplyr::filter(date > zoo::as.yearqtr(2004, Q1)) %>%
   
-  dplyr::rename('Componente' = setores_e_subsetores) %>% 
+  dplyr::rename('Componente' = setores_e_subsetores,
+                
+                'Data' = date, 
+                
+                'Valor' = valor) %>% 
 
   ggplot2::ggplot() +
 
-  ggplot2::geom_line(mapping = ggplot2::aes(x = date, y = valor, colour = Componente),
+  ggplot2::geom_line(mapping = ggplot2::aes(x = Data, y = Valor, colour = Componente),
 
                      size = 0.5) +
 
-  ggplot2::geom_point(mapping = ggplot2::aes(x = date, y = valor, colour = Componente),
+  ggplot2::geom_point(mapping = ggplot2::aes(x = Data, y = Valor, colour = Componente),
                       
                       size = 0.75) +
 
@@ -324,15 +283,19 @@ componentes_demanda <- agregados_macroeconomicos %>%
 
   dplyr::filter(date > zoo::as.yearqtr(2004, Q1)) %>%
   
-  dplyr::rename('Componente' = setores_e_subsetores) %>% 
+  dplyr::rename('Componente' = setores_e_subsetores,
+                
+                'Data' = date, 
+                
+                'Valor' = valor) %>% 
 
   ggplot2::ggplot() +
 
-  ggplot2::geom_line(mapping = ggplot2::aes(x = date, y = valor, colour = Componente),
+  ggplot2::geom_line(mapping = ggplot2::aes(x = Data, y = Valor, colour = Componente),
 
                      size = 0.5) +
 
-  ggplot2::geom_point(mapping = ggplot2::aes(x = date, y = valor, colour = Componente),
+  ggplot2::geom_point(mapping = ggplot2::aes(x = Data, y = Valor, colour = Componente),
                       
                       size = 0.75) +
 
@@ -398,22 +361,13 @@ name: revisao
 ## ANÁLISE DE INDICADORES DE CONJUNTURA
 
 
-**CONCEITOS:**
-
-
-</br>
-
-
 - Como discutido, no curto prazo pode haver um descompasso no mercado de bens e serviços (desequilíbrio
 entre oferta e demanda). Assim, é sempre relevante avaliar a conjuntura econômica a partir das duas
 óticas (mais uma vez, oferta e demanda);
 
 
-</br>
-
-
-- Existem uma série de indicadores relevantes para compreender a conjuntura e com frequência maior 
-que a contabilização dos itens apresentados na seção anterior, isto é, PIB, Consumo das Famílias, 
+- Existem uma série de indicadores relevantes para compreender a conjuntura no curto prazo e com frequência 
+mensal. Assim, estes indicadores podem ser utilizados para se buscar prever os agregados macroeconômicos: PIB, Consumo das Famílias, 
 Investimento das Empresas, Gastos do Governo, Exportações e Importações.
  
  
@@ -423,17 +377,11 @@ Investimento das Empresas, Gastos do Governo, Exportações e Importações.
 
 ## ANÁLISE DE INDICADORES DE CONJUNTURA
 
-
-**CONCEITOS:**
-
-
 - Indicadores de Oferta:
  
   - **Índice de Atividade Econômica do Banco Central (IBC-Br)**;
  
-  - **Pesquisa Industrial Mensal Produção Física (PIM-PF)**;
-  
-  - **Utilização da Capacidade Instalada (UCI - FGV)**;
+  - **Pesquisa Industrial Mensal Produção Física (PIM-PF)**.
  
 - Indicadores de Demanda:
 
@@ -441,20 +389,11 @@ Investimento das Empresas, Gastos do Governo, Exportações e Importações.
   
   - **Pesquisa Mensal de Serviços (PMS)**.
 
-
-
 ---
 <div style="text-align: justify">
 
 
-## ANÁLISE DE INDICADORES DE CONJUNTURA
-
-
-**INDICADOR DE OFERTA**
-
-
-</br>
-
+## ANÁLISE DE INDICADORES DE CONJUNTURA (INDICADOR DE OFERTA)
 
 - Índice de Atividade Econômica do Banco Central (**IBC-Br**):
 
@@ -531,14 +470,7 @@ widgetframe::frameWidget(ibc_br_sa, width = '100%', height = '100%')
 <div style="text-align: justify">
 
 
-## ANÁLISE DE INDICADORES DE CONJUNTURA
-
- 
-**INDICADOR DE OFERTA**
-
-
-</br>
-
+## ANÁLISE DE INDICADORES DE CONJUNTURA (INDICADOR DE OFERTA)
 
 - Pesquisa Industrial Mensal Produção Física (**PIM-PF**):
 
@@ -565,7 +497,7 @@ widgetframe::frameWidget(ibc_br_sa, width = '100%', height = '100%')
 
 pim_sa <- sidrar::get_sidra(api = '/t/3651/n1/all/v/3134/p/all/c543/129278,129283,129300/d/v3134%201',
                                            
-                         period = as.Date('2020-04-01')) %>%
+                         period = as.Date('2020-04-01')) %>% 
   
   janitor::clean_names() %>%
   
@@ -579,15 +511,18 @@ pim_sa <- sidrar::get_sidra(api = '/t/3651/n1/all/v/3134/p/all/c543/129278,12928
                                               
                                               Componente == '2 Bens intermediários' ~ 'Bens intermediários',
                                               
-                                              Componente == '3 Bens de consumo' ~ 'Bens de consumo')) %>% 
+                                              Componente == '3 Bens de consumo' ~ 'Bens de consumo')) %>%
+  
+  dplyr::rename('Data' = date,
+                'Valor' = valor) %>% 
   
   ggplot2::ggplot() +
 
-  ggplot2::geom_line(mapping = ggplot2::aes(x = date, y = valor, colour = Componente),
+  ggplot2::geom_line(mapping = ggplot2::aes(x = Data, y = Valor, colour = Componente),
 
                      size = 0.5) +
 
-  ggplot2::geom_point(mapping = ggplot2::aes(x = date, y = valor, colour = Componente),
+  ggplot2::geom_point(mapping = ggplot2::aes(x = Data, y = Valor, colour = Componente),
                       
                       size = 0.75) +
 
@@ -616,103 +551,11 @@ widgetframe::frameWidget(pim_sa, width = '100%', height = '100%')
 
 
 ```
-
-
 ---
 <div style="text-align: justify">
 
 
-## ANÁLISE DE INDICADORES DE CONJUNTURA
-
-
-**INDICADOR DE OFERTA**
-
-
-</br>
-
-
-- Utilização da Capacidade Instalada (**UCI - FGV**):
-
-  - **Percentual de ocupação dos fatores capital e trabalho** no trimestre de realização da pesquisa
-  (Média);
-  
-  - Pesquisa realizada em **1400 empresas em todo o território nacional**;
-  
-  - Possui **frequência trimestral** (contribui para o entendimento do PIB);
-  
-  - Não há disponibilidade de dados com ajuste sazonal;
-  
-  - **Instituto Brasileiro de Economia - (Fundação Getulio Vargas  - FGV)**. 
-  
-  
----
-
-
-## O BRASIL EM PERSPECTIVA: UCI - FGV
-
-
-```{r, warning = F,message = F, error = F, echo = F, fig.align = 'center', out.height = '70%', out.width = '70%' ,dpi = 300}
-
-
-`%>%` <- magrittr::`%>%`
-
-
-UCI_dados <- BETS::BETSget(1344, data.frame = T) %>% 
-  
-  dplyr::rename('Data' = date,
-                
-                'Valor' = value) 
-
-UCI <- UCI_dados %>% 
-
-  ggplot2::ggplot() +
-
-  ggplot2::geom_line(mapping = ggplot2::aes(x = Data, y = Valor),
-                     
-                     colour = '#23395b',
-                     
-                     size = .5) +
-
-  ggplot2::geom_point(mapping = ggplot2::aes(x = Data, y = Valor),
-                      
-                      colour = '#23395b',
-                      
-                      size = .75) +
-
-  ggplot2::labs(title = 'Utilização da Capacidade Instalada (UCI - FGV)',
-                
-                x = 'Meses',
-                
-                y = '(%)',
-                
-                caption = 'Dados: IBGE.') +
-  
-  xaringanthemer::theme_xaringan(text_font_size = 15,
-                               
-                               title_font_size = 20)
-  
-  
-UCI <- plotly::ggplotly(UCI)
-
-
-widgetframe::frameWidget(UCI, width = '100%', height = '100%')
-
-
-
-```
-
-
----
-<div style="text-align: justify">
-
-
-## ANÁLISE DE INDICADORES DE CONJUNTURA
-
- 
-**INDICADOR DE DEMANDA**
-
-
-</br>
+## ANÁLISE DE INDICADORES DE CONJUNTURA (INDICADOR DE DEMANDA)
 
 
 - Pesquisa Mensal de Serviços (**PMS**):
@@ -791,14 +634,7 @@ widgetframe::frameWidget(pms_sa, width = '100%', height = '100%')
 <div style="text-align: justify">
 
 
-## ANÁLISE DE INDICADORES DE CONJUNTURA
-
- 
-**INDICADOR DE DEMANDA**
-
-
-</br>
-
+## ANÁLISE DE INDICADORES DE CONJUNTURA (INDICADOR DE DEMANDA)
 
 - Pesquisa Mensal de Comércio (**PMC**):
 
