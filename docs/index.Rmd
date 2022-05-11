@@ -45,10 +45,13 @@ xaringanExtra::use_search(show_icon = TRUE)
 - [**REVISÃO**](#revisao)
 
 
-- [**ANÁLISE DOS COMPONENTES DA DEMANDA**](#)
+- [**ANÁLISE DOS COMPONENTES DA DEMANDA**](#demanda)
 
 
-- [**ANÁLISE DE INDICADORES DE CONJUNTURA**](#)
+- [**ANÁLISE DE INDICADORES DE CONJUNTURA**](#conjuntura)
+
+
+- [**PIB POTENCIAL E HIATO DO PRODUTO**](#conjuntura)
 
 
 ---
@@ -134,7 +137,7 @@ $M$: Importações.
   
 ---
 class: inverse, center, middle 
-name: revisao
+name: demanda
 
 
 ## ANÁLISE DOS COMPONENTES DA DEMANDA
@@ -348,7 +351,7 @@ widgetframe::frameWidget(componentes_demanda, width = '100%', height = '100%')
 
 ---
 class: inverse, center, middle 
-name: revisao
+name: conjuntura
 
 
 ## ANÁLISE DE INDICADORES DE CONJUNTURA
@@ -774,5 +777,80 @@ widgetframe::frameWidget(pmc_sa, width = '100%', height = '100%')
 ```
   
   
+---
+class: inverse, center, middle 
+name: potencial
+
+## PIB POTENCIAL X PIB EFETIVO </br> (HIATO DO PRODUTO) 
   
-  
+---
+<div style="text-align: justify">
+
+## PIB POTENCIAL
+
+- Apesar de a economia tender ao equilíbrio no longo prazo (oferta agregada igual
+a demanda agregada), pode haver uma série de flutuações 
+em torno dessa tendência no curto prazo;
+
+- Entende-se que a oferta agregada no longo prazo corresponde a adequada 
+alocação de recursos de uma país, ou seja, a alocação de recursos que leva em consideração
+os recuros naturais disponíveis, investimento planejado em máquinas e 
+equipamentos, quantidade de trabalhadores dispostos a se empregarem, produtividade da 
+economia;
+
+- Assim, quando nos referimos ao produto agregado em equilíbrio (oferta agregada de 
+longo prazo), o chamamos de **PIB Potencial**.
+
+
+---
+<div style="text-align: justify">
+
+## PIB EFETIVO
+
+- Por sua vez, no curto prazo os produtores podem alterar a quantidade produzida 
+e acabam por deslocar a oferta agregada da tendência de longo prazo e, portanto, 
+deslocar a  oferta agregada de seu ótimo;
+
+- Este deslocamento em torno da oferta agregada de longo prazo depende principalmente
+da formação das expectativas dos agentes em relação ao estado da economia. Estas 
+flutuações em torno da tendência de longo prazo são chamadas de **ciclos econômicos**; 
+
+- Assim, denominamos de **PIB Efetivo** o produto agregado de curto prazo (quantidade 
+efetivamente produzida em decorrência dos ciclos econômicos).
+
+
+---
+<div style="text-align: justify">
+
+## HIATO DO PRODUTO
+
+- A partir dos conceitos de **PIB Potencial** e **PIB efetivo** conseguimos 
+compreender se a economia está demasiadamente aquecida, ou 
+se a economia está produzindo aquém do seu potencial;
+
+- Neste sentido, uma métrica relevante para se compreender o estado da economia 
+consiste em calcular a **diferença** entre o **PIB Potencial** e o **PIB Efetivo**,
+esta métrica é denominada de **Hiato do Produto**.
+
+$$Hiato \ do \ Produto = PIB \ Potencial - PIB \ Efetivo $$
+---
+<div style="text-align: justify">
+
+## HIATO DO PRODUTO
+
+- $PIB \ Potencial > PIB \ Efetivo \Rightarrow  Hiato \ do \ Produto > 0$
+  - A economia está aquecida. Produção maior que a tendência de longo prazo;
+
+- $PIB \ Potencial < PIB \ Efetivo \Rightarrow  Hiato \ do \ Produto < 0$
+  - A economia está aquém de seu potencial. Produção menor que a tendência de 
+  longo prazo;
+
+
+
+
+
+
+
+
+
+
